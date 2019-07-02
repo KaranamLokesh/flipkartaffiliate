@@ -1,3 +1,4 @@
+<?php
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -29,3 +30,4 @@
     <script src="js/extention/choices.js"></script>
   </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
+?>
