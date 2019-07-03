@@ -14,15 +14,16 @@ $token = '34adf1305516462d8ce93de45594da81';
 $fkObj = new flipkartclass($affiliateID, $token);
 
 // fetch flipkart products
-$value=$_GET['search'];
+$queryobject=$_GET['search'];
+$value=strval($queryobject);
 echo $value;
 // $output = $request->getParameter();
 // echo $output;
-$dotdJsonURL =  'https://affiliate-api.flipkart.net/affiliate/1.0/search.json?query=$value&resultCount=10';
+$dotdJsonURL ='https://affiliate-api.flipkart.net/affiliate/1.0/search.json?query='.$value.'&resultCount=10'; 
 
 $result = flipkartclass::getData($dotdJsonURL, 'json');
 if(!$result) {
-    	echo "<h3>There are no products, Or Error on flipkart api server please contact to flipkart affiliate team..</h3>";
+    	echo "<h3>There are no products, Or Error on flipkart api server please contact to flipkart affiliate team or Check your internet connection</h3>";
     }
 ?>
 
