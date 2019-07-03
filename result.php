@@ -2,8 +2,10 @@
 
 
 <?php
+session_start();
+
 include_once("flipkartclass.php");
-include_once("index.html");
+
 
 // Get affiliateID and token from https://affiliate.flipkart.com/
 // Set flipkart affiliateID and token
@@ -12,11 +14,11 @@ $token = '34adf1305516462d8ce93de45594da81';
 $fkObj = new flipkartclass($affiliateID, $token);
 
 // fetch flipkart products
-if ( ! empty($_POST['search'])){
-    $query = $_POST['search']);
-}
-
-$dotdJsonURL =  'https://affiliate-api.flipkart.net/affiliate/1.0/search.json?query=$query&$resultCount=10';
+$value=$_GET['search'];
+echo $value;
+// $output = $request->getParameter();
+// echo $output;
+$dotdJsonURL =  'https://affiliate-api.flipkart.net/affiliate/1.0/search.json?query=$value&resultCount=10';
 
 $result = flipkartclass::getData($dotdJsonURL, 'json');
 if(!$result) {
