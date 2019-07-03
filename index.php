@@ -31,7 +31,8 @@ session_start();
         </form>
           </div>
         </div>
-        <span class="info">ex. Mobiles,Accessories,Gadgets</span>
+       
+      
       </form>
     </div>
     <script type="text/javascript">
