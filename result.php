@@ -16,7 +16,7 @@ $fkObj = new flipkartclass($affiliateID, $token);
 // fetch flipkart products
 $queryobject=$_GET['search'];
 $value=strval($queryobject);
-echo $value;
+
 // $output = $request->getParameter();
 // echo $output;
 $dotdJsonURL ='https://affiliate-api.flipkart.net/affiliate/1.0/search.json?query='.$value.'&resultCount=10'; 
